@@ -1,4 +1,4 @@
-# 🧠 Neuro-Fuzzy Deception Detection Using Keystroke Hesitation Patterns
+# Neuro-Fuzzy Deception Detection Using Keystroke Hesitation Patterns
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Architecture](https://img.shields.io/badge/architecture-ANFIS%20(Takagi--Sugeno)-brightgreen.svg)]()
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary & Scientific Basis
+## Executive Summary & Scientific Basis
 
 Formulating a false answer requires greater cognitive effort (*monitoring oneself, inventing details, avoiding contradictions*) than recalling an autobiographical truth. This mental friction physically manifests in micro-keystroke timings:
 * **Initial Latency**: Thinking delay before the first keystroke.
@@ -21,7 +21,7 @@ Rather than relying on opaque black-box deep neural networks, this project utili
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 [1] Keystroke Timings
@@ -50,7 +50,7 @@ Rather than relying on opaque black-box deep neural networks, this project utili
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 ### 1. Prerequisites & Installation
 
@@ -108,7 +108,7 @@ python src/model/evaluate_comprehensive.py
 
 ---
 
-## 📊 Experimental Results (Test Set Performance)
+## Experimental Results (Test Set Performance)
 
 All models evaluated on a **subject-held-out split** (evaluating on users unseen during training):
 
@@ -123,7 +123,7 @@ All models evaluated on a **subject-held-out split** (evaluating on users unseen
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── .gitignore                   # Clean ignore rules (excludes caches, OS files)
@@ -173,7 +173,7 @@ All models evaluated on a **subject-held-out split** (evaluating on users unseen
 
 ---
 
-## ⚖️ Academic Disclosure & Ethics
+## Academic Disclosure & Ethics
 
 * **Semi-Synthetic Nature**: Keystroke timing statistics were modeled using log-normal distributions grounded in established behavioral biometrics literature. 
 * **Scope**: This repository demonstrates an end-to-end neuro-fuzzy computational pipeline; it does not claim to serve as a definitive legal or forensic lie detector in unstructured real-world scenarios.
