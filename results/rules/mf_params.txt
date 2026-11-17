@@ -1,0 +1,23 @@
+
+Learned Membership Function Parameters
+--------------------------------------------
+
+  initial_latency
+    LOW     :  center=-0.0024  sigma=0.3284
+    MEDIUM  :  center=1.0000  sigma=0.3311
+
+  mean_dwell
+    LOW     :  center=-0.0039  sigma=0.3275
+    MEDIUM  :  center=0.9972  sigma=0.3357
+
+  mean_flight
+    LOW     :  center=-0.0018  sigma=0.3306
+    MEDIUM  :  center=0.9988  sigma=0.3344
+
+  pause_count
+    LOW     :  center=-0.0029  sigma=0.3290
+    MEDIUM  :  center=0.9976  sigma=0.3361
+
+  backspace_ratio
+    LOW     :  center=-0.0018  sigma=0.3312
+    MEDIUM  :  center=0.9977  sigma=0.3372

@@ -1,0 +1,23 @@
+{
+  "Threshold": {
+    "accuracy": 0.52,
+    "precision": 0.5111,
+    "recall": 0.92,
+    "f1": 0.6571,
+    "roc_auc": 0.5981
+  },
+  "SVM": {
+    "accuracy": 0.59,
+    "precision": 0.59,
+    "recall": 0.59,
+    "f1": 0.59,
+    "roc_auc": 0.6078
+  },
+  "ANFIS": {
+    "accuracy": 0.505,
+    "precision": 0.5026,
+    "recall": 0.98,
+    "f1": 0.6644,
+    "roc_auc": 0.5609
+  }
+}
