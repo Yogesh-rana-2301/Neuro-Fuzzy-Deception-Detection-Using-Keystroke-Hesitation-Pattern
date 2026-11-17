@@ -39,7 +39,7 @@ from collection.prompts import TRUTHFUL_PROMPTS, FABRICATION_PROMPTS
 # Configure Page
 st.set_page_config(
     page_title="Neuro-Fuzzy Deception Detection",
-    page_icon="🧠",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -80,10 +80,10 @@ def load_scorer():
 scorer = load_scorer()
 
 # Sidebar Navigation & Model Info
-st.sidebar.title("🧠 Neuro-Fuzzy System")
+st.sidebar.title(" Neuro-Fuzzy System")
 mode = st.sidebar.radio(
     "Choose Demonstration Mode:",
-    ["⌨️ Live Keystroke Capture", "🎛️ Interactive Feature Sliders", "📊 Evaluation & Architecture"]
+    [" Live Keystroke Capture", " Interactive Feature Sliders", " Evaluation & Architecture"]
 )
 
 st.sidebar.markdown("---")
@@ -100,8 +100,8 @@ st.sidebar.markdown(f"""
 # ==============================================================================
 # MODE 1: LIVE KEYSTROKE CAPTURE
 # ==============================================================================
-if mode == "⌨️ Live Keystroke Capture":
-    st.title("⌨️ Live Keystroke Hesitation Detection")
+if mode == " Live Keystroke Capture":
+    st.title(" Live Keystroke Hesitation Detection")
     st.markdown("""
     Answer the selected prompt below by typing in the response box.
     The system measures **how** you type (*hesitations, key hold durations, transitions, and revisions*),
@@ -183,7 +183,7 @@ if mode == "⌨️ Live Keystroke Capture":
         sim_backspaces = st.number_input("Backspace Ratio:", min_value=0.0, max_value=0.6, value=0.03 if condition == "Truthful Response" else 0.11, step=0.01)
         st.write("")
         st.write("")
-        evaluate_btn = st.button("🔍 Run ANFIS Inference", use_container_width=True, type="primary")
+        evaluate_btn = st.button(" Run ANFIS Inference", use_container_width=True, type="primary")
 
     if evaluate_btn:
         res = scorer.score_features(
@@ -218,8 +218,8 @@ if mode == "⌨️ Live Keystroke Capture":
 # ==============================================================================
 # MODE 2: INTERACTIVE FEATURE SLIDERS
 # ==============================================================================
-elif mode == "🎛️ Interactive Feature Sliders":
-    st.title("🎛️ Interactive Keystroke Hesitation Playground")
+elif mode == " Interactive Feature Sliders":
+    st.title(" Interactive Keystroke Hesitation Playground")
     st.markdown("Adjust individual hesitation parameters to observe how the Takagi-Sugeno inference rules adapt in real-time.")
 
     c1, c2 = st.columns([1, 1])
@@ -254,7 +254,7 @@ elif mode == "🎛️ Interactive Feature Sliders":
 # MODE 3: EVALUATION & ARCHITECTURE
 # ==============================================================================
 else:
-    st.title("📊 Architecture, Evaluation & Learned Rules")
+    st.title(" Architecture, Evaluation & Learned Rules")
 
     tab1, tab2, tab3 = st.tabs(["Model Comparison & ROC", "Membership Functions & Loss", "Fuzzy Rule Base"])
 
@@ -267,10 +267,10 @@ else:
 
         if os.path.exists(roc_path):
             with col_m1:
-                st.image(roc_path, caption="ROC Curve Overlay Across All 3 Models", use_container_width=True)
+                st.image(roc_path, caption="ROC Curve Overlay Across All 3 Models", use_column_width=True)
         if os.path.exists(comp_path):
             with col_m2:
-                st.image(comp_path, caption="Accuracy, F1, and ROC-AUC Comparison", use_container_width=True)
+                st.image(comp_path, caption="Accuracy, F1, and ROC-AUC Comparison", use_column_width=True)
 
         # Summary Table
         summary_path = os.path.join(PROJECT_ROOT, "results", "metrics_summary.json")
@@ -287,11 +287,11 @@ else:
         loss_curve = os.path.join(PROJECT_ROOT, "results", "figures", "loss_curve.png")
 
         if os.path.exists(mf_before) and os.path.exists(mf_after):
-            st.image(mf_before, caption="Initial Membership Functions", use_container_width=True)
-            st.image(mf_after, caption="Trained / Adjusted Membership Functions", use_container_width=True)
+            st.image(mf_before, caption="Initial Membership Functions", use_column_width=True)
+            st.image(mf_after, caption="Trained / Adjusted Membership Functions", use_column_width=True)
 
         if os.path.exists(loss_curve):
-            st.image(loss_curve, caption="ANFIS Hybrid Training Loss Curve", use_container_width=True)
+            st.image(loss_curve, caption="ANFIS Hybrid Training Loss Curve", use_column_width=True)
 
     with tab3:
         st.subheader("Learned Takagi-Sugeno Fuzzy Rules")
